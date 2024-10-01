@@ -121,6 +121,13 @@ body {
                             width: 100%;
                             margin-top: 10px;
                             margin-bottom: 10px;
+                            text-align: center;
+
+                            th{
+                                font-size: 20px;
+                                color: #1A1B41;
+                                text-decoration: underline;
+                            }
 
                             #addButton{
                                 background-color: #1A1B41;
@@ -131,6 +138,10 @@ body {
                                 border-radius: 10px;
                                 font-family: Montserrat;
                                 font-size: 17px;
+                            }
+
+                            #addButton:hover{
+                                background-color: black;
                             }
                         }
                     }

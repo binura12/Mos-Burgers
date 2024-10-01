@@ -1,19 +1,19 @@
 // Burgers Object
 const burgers = {
-    B1001: { name: "Classic Burger (Large)", price: 750.00, discount: 0, image: "Assets/Burgers/" },
-    B1002: { name: "Classic Burger (Regular)", price: 1500.00, discount: 15, image: "images/classic-burger-regular.jpg" },
-    B1003: { name: "Turkey Burger", price: 1600.00, discount: 0, image: "images/turkey-burger.jpg" },
-    B1004: { name: "Chicken Burger (Large)", price: 1400.00, discount: 0, image: "images/chicken-burger-large.jpg" },
-    B1005: { name: "Chicken Burger (Regular)", price: 800.00, discount: 20, image: "images/chicken-burger-regular.jpg" },
-    B1006: { name: "Cheese Burger (Large)", price: 1000.00, discount: 0, image: "images/cheese-burger-large.jpg" },
-    B1007: { name: "Cheese Burger (Regular)", price: 600.00, discount: 0, image: "images/cheese-burger-regular.jpg" },
-    B1008: { name: "Bacon Burger", price: 650.00, discount: 15, image: "images/bacon-burger.jpg" },
-    B1009: { name: "Shawarma Burger", price: 800.00, discount: 0, image: "images/shawarma-burger.jpg" },
-    B1010: { name: "Olive Burger", price: 1800.00, discount: 0, image: "images/olive-burger.jpg" },
-    B1012: { name: "Double-Cheese Burger", price: 1250.00, discount: 20, image: "images/double-cheese-burger.jpg" },
-    B1013: { name: "Crispy Chicken Burger (Regular)", price: 1200.00, discount: 0, image: "images/crispy-chicken-burger-regular.jpg" },
-    B1014: { name: "Crispy Chicken Burger (Large)", price: 1600.00, discount: 10, image: "images/crispy-chicken-burger-large.jpg" },
-    B1015: { name: "Paneer Burger", price: 900.00, discount: 0, image: "images/paneer-burger.jpg" }
+    B1001: { name: "Classic Burger (Large)", price: 750.00, discount: 0 },
+    B1002: { name: "Classic Burger (Regular)", price: 1500.00, discount: 15 },
+    B1003: { name: "Turkey Burger", price: 1600.00, discount: 0 },
+    B1004: { name: "Chicken Burger (Large)", price: 1400.00, discount: 0 },
+    B1005: { name: "Chicken Burger (Regular)", price: 800.00, discount: 20 },
+    B1006: { name: "Cheese Burger (Large)", price: 1000.00, discount: 0 },
+    B1007: { name: "Cheese Burger (Regular)", price: 600.00, discount: 0 },
+    B1008: { name: "Bacon Burger", price: 650.00, discount: 15 },
+    B1009: { name: "Shawarma Burger", price: 800.00, discount: 0 },
+    B1010: { name: "Olive Burger", price: 1800.00, discount: 0 },
+    B1012: { name: "Double-Cheese Burger", price: 1250.00, discount: 20 },
+    B1013: { name: "Crispy Chicken Burger (Regular)", price: 1200.00, discount: 0 },
+    B1014: { name: "Crispy Chicken Burger (Large)", price: 1600.00, discount: 10 },
+    B1015: { name: "Paneer Burger", price: 900.00, discount: 0 }
 };
 
 // Login to Admin Form
@@ -167,6 +167,21 @@ function loadBurgers() {
         <th>Discount</th>
     `;
     allBurgersTable.appendChild(headerRow);
+
+    for (const [key, burger] of Object.entries(burgers)) {
+        const row = document.createElement('tr');
+
+        const price = burger.price;
+
+        row.innerHTML = `
+            <td>${burger.name}</td>
+            <td>${price}/=</td>
+            <td>${burger.discount}%</td>
+            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+        `;
+
+        allBurgersTable.appendChild(row);
+    }
 }
 
 // Back To Home Method
