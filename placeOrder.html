@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mos Burgers - Place Order</title>
+    <link rel="stylesheet" href="placeOrder.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" />
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <img src="Assets/aac719558aef0f3bf049acb36e02c9bf.png" alt="" class="bgImage">
+            <div class="rectangle">
+                <span class="placeOrder">Place Order</span><br><br>
+                <div class="body">
+                    <table class="categories">
+                        <tr>
+                            <td><button id="burgers" onclick="loadBurgers()">Burgers</button></td>
+                            <td><button id="Submarines">Submarines</button></td>
+                            <td><button id="Fries">Fries</button></td>
+                            <td><button id="Pasta">Pasta</button></td>
+                            <td><button id="Beverages">Beverages</button></td>
+                            <td><button id="Chicken">Chicken</button></td>
+                        </tr>
+                    </table>
+                    <table class="search">
+                        <tr>
+                            <td><input type="text" name="" id="searchBar" placeholder="Enter what you want"></td>
+                            <td><button id="searchItem" onclick="searchItem()"><img src="Assets/searchIcon.png" alt=""
+                                        id="searchIcon"></button></td>
+                            <td><button id="savedOders">Saved Orders</button></td>
+                        </tr>
+                    </table>
+                    <div class="foodAndOrder">
+                        <div id="foods">
+                            <table id="allBurgers">
+                                <tr>
+                                    <th><u>Name</u></th>
+                                    <th><u>Price</u></th>
+                                    <th><u>Discount</u></th>
+                                </tr>
+                                <tr>
+                                    <td id="name"></td>
+                                    <td id="price"></td>
+                                    <td id="discount"></td>
+                                    <td id="addBtn">
+                                        <button id="addButton">Add</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="orderFood"></div>
+                    </div>
+                </div>
+            </div>
+    </center>
+    <script src="allMethods.js"></script>
+</body>
+
+</html>

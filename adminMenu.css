@@ -1,0 +1,89 @@
+body {
+    background-color: #BAFF29;
+    font-family: Montserrat;
+
+    .container {
+        width: 100%;
+        .bgImage{
+            width: 850px;
+        }
+        .rectangle {
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            backdrop-filter: blur(5px);
+            border-radius: 35px;
+            background-color: rgba(0, 0, 0, 0.48);
+            border: 1px solid #000;
+            box-sizing: border-box;
+            height: 670px;
+
+            button{
+                padding-left: 30px;
+                padding-right: 30px;
+                border-radius: 40px;
+                background-color: #c2e7da;
+                border: none;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+
+            button:hover{
+                background-color: #6290C3;
+                cursor: pointer;
+            }
+
+            .menu{
+                display: block;
+                margin-top: 10px;
+                font-size: 60px;
+                color: white;
+            }
+            
+            .menuBtns{
+                width: 38%;
+
+                .itemIcon{
+                    width: 25px;
+                    margin-right: 15px;
+                }
+    
+                #itemManage{
+                    width: 100%;
+                    font-size: 35px;
+                    font-family: Montserrat;
+                    margin-top: 90px;
+                    height: 60px;
+                }
+    
+                .regIcon{
+                    width: 25px;
+                    margin-right: 15px;
+                }
+    
+                #regCus{
+                    width: 100%;
+                    font-size: 35px;
+                    font-family: Montserrat;
+                    margin-top: 60px;
+                    height: 60px;
+                }
+    
+                .orderIcon{
+                    width: 25px;
+                    margin-right: 15px;
+                }
+    
+                #orderHis{
+                    width: 100%;
+                    font-size: 35px;
+                    font-family: Montserrat;
+                    margin-top: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}

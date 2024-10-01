@@ -1,0 +1,152 @@
+body {
+    background-color: #BAFF29;
+    font-family: Montserrat;
+
+    .container {
+        width: 100%;
+
+        .bgImage {
+            width: 850px;
+        }
+
+        .rectangle {
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            backdrop-filter: blur(5px);
+            border-radius: 35px;
+            background-color: rgba(0, 0, 0, 0.48);
+            border: 1px solid #000;
+            box-sizing: border-box;
+            height: 670px;
+
+            .placeOrder {
+                display: block;
+                margin-top: 10px;
+                font-size: 60px;
+                color: white;
+            }
+
+            .body {
+                width: 90%;
+                margin-top: -10px;
+
+                .categories {
+                    width: 100%;
+                    text-align: center;
+
+                    button {
+                        background-color: #F1FFE7;
+                        border: none;
+                        width: 150px;
+                        height: 40px;
+                        font-family: Montserrat;
+                        font-size: 20px;
+                        border-radius: 50px;
+                    }
+
+                    button:hover {
+                        background-color: #C2E7DA;
+                    }
+                }
+
+                .search {
+                    width: 96.2%;
+                    margin-top: 20px;
+                    text-align: center;
+
+                    #searchBar {
+                        text-align: center;
+                        font-family: Montserrat;
+                        font-size: 18px;
+                        height: 35px;
+                        width: 400px;
+                        border-radius: 50px;
+                        margin-right: -288px;
+                        float: left;
+                    }
+
+                    #searchItem {
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 100px;
+                        background-color: white;
+                        padding: 10px;
+                        border: none;
+                        margin-left: -18px;
+
+                        #searchIcon {
+                            width: 17px;
+                        }
+                    }
+
+                    #searchItem:hover {
+                        background-color: rgb(198, 198, 198);
+                    }
+
+                    #savedOders {
+                        background-color: #6290C3;
+                        border: none;
+                        height: 35px;
+                        width: 200px;
+                        font-size: 20px;
+                        font-family: Montserrat;
+                        text-align: center;
+                        border-radius: 100px;
+                        float: right;
+                    }
+
+                    #savedOders:hover {
+                        background-color: #1A1B41;
+                        color: white;
+                    }
+                }
+
+                .foodAndOrder {
+                    #foods {
+                        width: 67%;
+                        height: 400px;
+                        background-color: white;
+                        display: inline-block;
+                        margin-top: 25px;
+                        border-radius: 15px;
+                        vertical-align: top;
+                        overflow-y: auto;
+                        padding: 10px;
+                        box-sizing: border-box;
+
+                        #allBurgers{
+                            width: 100%;
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+
+                            #addButton{
+                                background-color: #1A1B41;
+                                border: none;
+                                color: white;
+                                width: 70px;
+                                height: 35px;
+                                border-radius: 10px;
+                                font-family: Montserrat;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .orderFood {
+                width: 27%;
+                height: 400px;
+                background-color: white;
+                display: inline-block;
+                border-radius: 15px;
+                margin-top: 25px;
+                margin-left: 12px;
+            }
+        }
+    }
+}

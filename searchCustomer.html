@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mos Burgers - Search Customer</title>
+    <link rel="stylesheet" href="searchCustomer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico:wght@400&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" />
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <img src="Assets/aac719558aef0f3bf049acb36e02c9bf.png" alt="" class="bgImage">
+            <div class="rectangle">
+                <span class="searchCus">Search Customer</span><br><br>
+                <div class="body">
+                    <table class="searching">
+                        <tr>
+                            <td>
+                                <input type="text" id="cusId2">
+                            </td>
+                            <td>
+                                <button id="searchCus" onclick="searchCustomer()"><img src="Assets/searchIcon.png" alt="" id="searchIcon"></button>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="inputFields">
+                        <tr>
+                            <td class="txtFieldsTitles">
+                                <h3 class="fName">Full Name</h3>
+                            </td>
+                            <td>
+                                <input type="text" name="" id="fNameTxt">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txtFieldsTitles">
+                                <h3 class="phnNumber">Phone Number</h3>
+                            </td>
+                            <td>
+                                <input type="text" name="" id="phnNumberTxt">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txtFieldsTitles">
+                                <h3 class="address">Address</h3>
+                            </td>
+                            <td>
+                                <input type="text" name="" id="addressTxt">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="txtFieldsTitles">
+                                <h3 class="email">Email Address</h3>
+                            </td>
+                            <td>
+                                <input type="text" name="" id="emailTxt">
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="inputButtons">
+                        <tr>
+                            <td>
+                                <button id="updateCustomer" onclick="updateCustomer()">Update</button>
+                            </td>
+                            <td>
+                                <button id="deleteCustomer" onclick="deleteCustomer()">Delete</button>
+                            </td>
+                            <td>
+                                <button id="backToHome" onclick="bachToHome()">Back To Home</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+    </center>
+    <script src="allMethods.js"></script>
+</body>
+
+</html>
