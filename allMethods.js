@@ -469,36 +469,58 @@ function loadAllItems() {
 
 // Place Order
 function addToOrder(itemname) {
-    console.log(itemname);
-
     const orderTableBody = document.getElementById("orderSection").getElementsByTagName("tbody")[0];
 
-    const newRow = document.createElement("tr");
+    let existingRow = Array.from(orderTableBody.rows).find(row => row.cells[0].innerText == itemname);
 
-    const itemCell = document.createElement("td");
-    itemCell.textContent = itemname;
-    newRow.appendChild(itemCell);
+    if (existingRow) {
+        let quantityInput = existingRow.cells[1].getElementsByTagName("input")[0];
+        quantityInput.value = parseInt(quantityInput.value) + 1;
+    } else {
+        const newRow = orderTableBody.insertRow();
 
-    const quantityCell = document.createElement("td");
-    const quantityInput = document.createElement("input");
-    quantityInput.type = "number";
-    quantityInput.id = "quantity";
-    quantityInput.value = 1;
-    quantityInput.min = 1;
-    quantityCell.appendChild(quantityInput);
-    newRow.appendChild(quantityCell);
+        newRow.innerHTML = `
+            <td>${itemname}</td>
+            <td><input type="number" value="1" min="1" onchange="updatePriceSection()" id="quantity"/></td>
+            <td><button onclick="removeItem(this)" id="removeButton">Remove</button></td>
+        `;
+    }
+    updatePriceSection();
+}
 
-    const removeCell = document.createElement("td");
-    const removeButton = document.createElement("button");
-    removeButton.textContent = "Remove";
-    removeButton.id = "removeButton";
-    removeButton.onclick = function() {
-        orderTableBody.removeChild(newRow);
-    };
-    removeCell.appendChild(removeButton);
-    newRow.appendChild(removeCell);
+// Removing item from the order section
+function removeItem(button) {
+    const orderTableBody = document.getElementById("orderSection").getElementsByTagName("tbody")[0];
+    orderTableBody.deleteRow(button.parentElement.parentElement.rowIndex - 1);
+    updatePriceSection();
+}
 
-    orderTableBody.appendChild(newRow);
+// Update Pricing Section
+function updatePriceSection() {
+    const orderTableBody = document.getElementById("orderSection").getElementsByTagName("tbody")[0];
+
+    let totalValue = 0;
+    let discountValue = 0;
+
+    Array.from(orderTableBody.rows).forEach(row => {
+        const itemName = row.cells[0].textContent;
+        const quantity = +row.cells[1].getElementsByTagName("input")[0].value;
+
+        const item = Object.values(allItems).find(item => item.name === itemName);
+        if (item && quantity > 0) {
+            const itemPrice = item.price * quantity;
+            const itemDiscount = item.discount ? (item.discount / 100) * itemPrice : 0;
+
+            totalValue += itemPrice;
+            discountValue += itemDiscount;
+        }
+    });
+
+    const finalValue = totalValue - discountValue;
+
+    document.getElementById("totalValue").innerText = totalValue.toFixed(2) + '/=';
+    document.getElementById("discountValue").innerText = discountValue.toFixed(2) + '/=';
+    document.getElementById("FinalValue").innerText = finalValue.toFixed(2) + '/=';
 }
 
 // Back To Home Method

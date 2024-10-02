@@ -169,7 +169,9 @@ body {
                 #cusNameAndBillId {
                     width: 90%;
                     text-align: center;
+
                     tr {
+
                         #cusName,
                         #billId {
                             margin: 10px;
@@ -179,29 +181,30 @@ body {
                         }
                     }
                 }
-                #ordersTable{
+
+                #ordersTable {
                     height: 180px;
                     overflow-y: auto;
 
-                    #orderSection{
+                    #orderSection {
                         margin-top: 10px;
                         width: 100%;
-    
-                        th{
+
+                        th {
                             text-decoration: underline;
                             text-align: center;
                             padding-bottom: 10px;
                         }
-    
-                        td{
+
+                        td {
                             text-align: center;
-    
-                            #quantity{
+
+                            #quantity {
                                 width: 40px;
                                 border: none;
                             }
-    
-                            #removeButton{
+
+                            #removeButton {
                                 background-color: red;
                                 color: white;
                                 border: none;
@@ -211,11 +214,59 @@ body {
                                 font-size: 10px;
                                 width: 60px;
                             }
-    
-                            #removeButton:hover{
+
+                            #removeButton:hover {
                                 background-color: rgb(214, 7, 7);
                             }
                         }
+                    }
+                }
+
+                #priceSection {
+                    width: 100%;
+
+                    margin-top: 20px;
+
+                    td {
+                        text-align: left;
+                        padding-left: 20px;
+                        padding-bottom: 5px;
+                    }
+                }
+
+                #saveButtons {
+                    text-align: center;
+                    width: 55%;
+                    margin-top: 10px;
+
+                    #btnPrintBill {
+                        width: 80px;
+                        font-family: Montserrat;
+                        height: 30px;
+                        border-radius: 10px;
+                        border: none;
+                        background-color: #1A1B41;
+                        color: white;
+                        font-size: 12px;
+                    }
+
+                    #btnPrintBill:hover {
+                        background-color: black;
+                    }
+
+                    #btnSave {
+                        width: 80px;
+                        font-family: Montserrat;
+                        height: 30px;
+                        border-radius: 10px;
+                        border: none;
+                        background-color: #6290C3;
+                        color: black;
+                        font-size: 15px;
+                    }
+
+                    #btnSave:hover {
+                        background-color: #6b9acf;
                     }
                 }
             }

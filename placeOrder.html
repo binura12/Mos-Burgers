@@ -60,6 +60,26 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <table id="priceSection">
+                                <tr>
+                                    <td>Total Value</td>
+                                    <td id="totalValue">5000.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Discount Value</td>
+                                    <td id="discountValue">200.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Final Value</td>
+                                    <td id="FinalValue">4800.00</td>
+                                </tr>
+                            </table>
+                            <table id="saveButtons">
+                                <tr>
+                                    <td><button onclick="printBill()" id="btnPrintBill">Print Bill</button></td>
+                                    <td><button onclick="save()" id="btnSave">Save</button></td>
+                                </tr>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -67,6 +87,7 @@
     </center>
     <script src="allMethods.js"></script>
     <script>
+        updatePriceSection();
         loadAllItems();
     </script>
 </body>
