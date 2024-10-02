@@ -117,7 +117,7 @@ body {
                         padding: 10px;
                         box-sizing: border-box;
 
-                        #allBurgers{
+                        #allfoods{
                             width: 100%;
                             margin-top: 10px;
                             margin-bottom: 10px;
@@ -128,16 +128,19 @@ body {
                                 color: #1A1B41;
                                 text-decoration: underline;
                             }
+                            td{
+                                font-size: 15px;
+                            }
 
                             #addButton{
                                 background-color: #1A1B41;
                                 border: none;
                                 color: white;
                                 width: 70px;
-                                height: 35px;
-                                border-radius: 10px;
+                                height: 32px;
+                                border-radius: 20px;
                                 font-family: Montserrat;
-                                font-size: 17px;
+                                font-size: 15px;
                             }
 
                             #addButton:hover{

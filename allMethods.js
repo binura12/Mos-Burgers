@@ -16,6 +16,29 @@ const burgers = {
     B1015: { name: "Paneer Burger", price: 900.00, discount: 0, expDate: "2024-07-05" }
 };
 
+// Submarines Object
+const submarines = {
+    B1016: { name: "Crispy Chicken Submarine (Large)", price: 2000.00, discount: 0, expDate: "2025-07-15" },
+    B1017: { name: "Crispy Chicken Submarine (Regular)", price: 1500.00, discount: 0, expDate: "2025-08-25" },
+    B1018: { name: "Chicken Submarine (Large)", price: 1800.00, discount: 3 },
+    B1019: { name: "Chicken Submarine (Regular", price: 1400.00, discount: 0 },
+    B1020: { name: "Grinder Submarine", price: 2300.00, discount: 0, expDate: "2025-05-05" },
+    B1021: { name: "Cheese Submarine", price: 2200.00, discount: 0, expDate: "2025-09-05" },
+    B1022: { name: "Double Cheese n Chicken Submarine", price: 1900.00, discount: 16, expDate: "2025-07-12" },
+    B1023: { name: "Special Horgie Submarine", price: 2800.00, discount: 0, expDate: "2025-03-20"},
+    B1024: { name: "MOS Special Submarine", price: 3000.00, discount: 0 }
+};
+
+//Fries Object
+const Fries = {
+    B1025: { name: "Steak Fries (Large)", price: 1200.00, discount: 0, expDate: "2025-07-15" },
+    B1026: { name: "Steak Fries (Medium)", price: 600.00, discount: 0, expDate: "2025-08-25" },
+    B1027: { name: "French Fries (Large) ", price: 800.00, discount: 0, expDate: "2025-05-05" },
+    B1028: { name: "French Fries (Medium) ", price: 650.00, discount: 0, expDate: "2025-05-05" },
+    B1029: { name: "French Fries (Small)", price: 450.00, discount: 0, expDate: "2025-05-05" },
+    B1030: { name: "Sweet Potato Fries (Large)", price: 600.00, discount: 0, expDate: "2025-09-05" }
+};
+
 // Login to Admin Form
 function loginToAdminMenu() {
     event.preventDefault();
@@ -157,8 +180,8 @@ function deleteCustomer() {
 
 // Loading Burgers
 function loadBurgers() {
-    const allBurgersTable = document.getElementById("allBurgers");
-    allBurgersTable.innerHTML = '';
+    const allFoodsTable = document.getElementById("allfoods");
+    allFoodsTable.innerHTML = '';
 
     const headerRow = document.createElement('tr');
     headerRow.innerHTML = `
@@ -167,7 +190,7 @@ function loadBurgers() {
         <th>Discount</th>
         <th>Exp.Date</th>
     `;
-    allBurgersTable.appendChild(headerRow);
+    allFoodsTable.appendChild(headerRow);
 
     for (const [key, burger] of Object.entries(burgers)) {
         const row = document.createElement('tr');
@@ -178,11 +201,70 @@ function loadBurgers() {
             <td>${burger.name}</td>
             <td>${price}/=</td>
             <td>${burger.discount}%</td>
-            <td>${burger.expDate}</td>
+            <td>${burger.expDate || 'N/A'}</td>
             <td><button id="addButton" onclick="addToOrder">Add</button></td>
         `;
+        allFoodsTable.appendChild(row);
+    }
+}
 
-        allBurgersTable.appendChild(row);
+// Loading Submarines
+function loadSubmarines(){
+    const allFoodsTable = document.getElementById("allfoods");
+    allFoodsTable.innerHTML = '';
+
+    const headerRow = document.createElement('tr');
+    headerRow.innerHTML = `
+        <th>Name</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Exp.Date</th>
+    `;
+    allFoodsTable.appendChild(headerRow);
+
+    for (const [key, Submarine] of Object.entries(submarines)) {
+        const row = document.createElement('tr');
+
+        const price = Submarine.price;
+
+        row.innerHTML = `
+            <td>${Submarine.name}</td>
+            <td>${price}/=</td>
+            <td>${Submarine.discount}%</td>
+            <td>${Submarine.expDate || 'N/A'}</td>
+            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+        `;
+        allFoodsTable.appendChild(row);
+    }
+}
+
+// Loading Fries
+function loadFries(){
+    const allFoodsTable = document.getElementById("allfoods");
+    allFoodsTable.innerHTML = '';
+
+    const headerRow = document.createElement('tr');
+    headerRow.innerHTML = `
+        <th>Name</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Exp.Date</th>
+    `;
+    allFoodsTable.appendChild(headerRow);
+
+    for (const [key, Frie] of Object.entries(Fries)) {
+        const row = document.createElement('tr');
+
+        const price = Frie.price;
+
+        row.innerHTML = `
+            <td>${Frie.name}</td>
+            <td>${price}/=</td>
+            <td>${Frie.discount}%</td>
+            <td>${Frie.expDate || 'N/A'}</td>
+            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+        `;
+        allFoodsTable.appendChild(row);
     }
 }
 
