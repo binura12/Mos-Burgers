@@ -132,6 +132,10 @@ body {
                                 font-size: 15px;
                             }
 
+                            tr:hover{
+                                background-color: #e4e3e3;
+                            }
+
                             #addButton{
                                 background-color: #1A1B41;
                                 border: none;

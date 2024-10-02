@@ -22,9 +22,9 @@
                             <td><button id="burgers" onclick="loadBurgers()">Burgers</button></td>
                             <td><button id="Submarines" onclick="loadSubmarines()">Submarines</button></td>
                             <td><button id="Fries" onclick="loadFries()">Fries</button></td>
-                            <td><button id="Pasta">Pasta</button></td>
-                            <td><button id="Beverages">Beverages</button></td>
-                            <td><button id="Chicken">Chicken</button></td>
+                            <td><button id="Pasta" onclick="loadPasta()">Pasta</button></td>
+                            <td><button id="Beverages" onclick="loadBeverages()">Beverages</button></td>
+                            <td><button id="Chicken" onclick="loadChickens()">Chicken</button></td>
                         </tr>
                     </table>
                     <table class="search">
@@ -40,12 +40,20 @@
                             <table id="allfoods">
                             </table>
                         </div>
-                        <div class="orderFood"></div>
+                        <div class="orderFood">
+                            <table id="orderSection">
+                                <tr></tr>
+                                <tr></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
     </center>
     <script src="allMethods.js"></script>
+    <script>
+        loadAllItems();
+    </script>
 </body>
 
 </html>
