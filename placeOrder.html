@@ -41,10 +41,25 @@
                             </table>
                         </div>
                         <div class="orderFood">
-                            <table id="orderSection">
-                                <tr></tr>
-                                <tr></tr>
+                            <table id="cusNameAndBillId">
+                                <tr>
+                                    <td><input type="text" id="cusName" placeholder="Customer Name"></td>
+                                    <td><input type="text" id="billId"></td>
+                                </tr>
                             </table>
+                            <div id="ordersTable">
+                                <table id="orderSection">
+                                    <thead>
+                                        <tr>
+                                            <th>Item Name</th>
+                                            <th>Quantity</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="orderItems">
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

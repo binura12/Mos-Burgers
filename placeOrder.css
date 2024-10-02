@@ -117,26 +117,27 @@ body {
                         padding: 10px;
                         box-sizing: border-box;
 
-                        #allfoods{
+                        #allfoods {
                             width: 100%;
                             margin-top: 10px;
                             margin-bottom: 10px;
                             text-align: center;
 
-                            th{
+                            th {
                                 font-size: 20px;
                                 color: #1A1B41;
                                 text-decoration: underline;
                             }
-                            td{
+
+                            td {
                                 font-size: 15px;
                             }
 
-                            tr:hover{
+                            tr:hover {
                                 background-color: #e4e3e3;
                             }
 
-                            #addButton{
+                            #addButton {
                                 background-color: #1A1B41;
                                 border: none;
                                 color: white;
@@ -147,7 +148,7 @@ body {
                                 font-size: 15px;
                             }
 
-                            #addButton:hover{
+                            #addButton:hover {
                                 background-color: black;
                             }
                         }
@@ -164,6 +165,59 @@ body {
                 border-radius: 15px;
                 margin-top: 25px;
                 margin-left: 12px;
+
+                #cusNameAndBillId {
+                    width: 90%;
+                    text-align: center;
+                    tr {
+                        #cusName,
+                        #billId {
+                            margin: 10px;
+                            width: 100px;
+                            border-radius: 5px;
+                            text-align: center;
+                        }
+                    }
+                }
+                #ordersTable{
+                    height: 180px;
+                    overflow-y: auto;
+
+                    #orderSection{
+                        margin-top: 10px;
+                        width: 100%;
+    
+                        th{
+                            text-decoration: underline;
+                            text-align: center;
+                            padding-bottom: 10px;
+                        }
+    
+                        td{
+                            text-align: center;
+    
+                            #quantity{
+                                width: 40px;
+                                border: none;
+                            }
+    
+                            #removeButton{
+                                background-color: red;
+                                color: white;
+                                border: none;
+                                border-radius: 15px;
+                                font-family: Montserrat;
+                                height: 25px;
+                                font-size: 10px;
+                                width: 60px;
+                            }
+    
+                            #removeButton:hover{
+                                background-color: rgb(214, 7, 7);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

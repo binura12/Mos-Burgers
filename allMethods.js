@@ -7,7 +7,7 @@ const burgers = {
     B1005: { name: "Chicken Burger (Regular)", price: 800.00, discount: 20, expDate: "2025-05-05" },
     B1006: { name: "Cheese Burger (Large)", price: 1000.00, discount: 0, expDate: "2025-09-05" },
     B1007: { name: "Cheese Burger (Regular)", price: 600.00, discount: 0, expDate: "2025-07-12" },
-    B1008: { name: "Bacon Burger", price: 650.00, discount: 15, expDate: "2025-03-20"},
+    B1008: { name: "Bacon Burger", price: 650.00, discount: 15, expDate: "2025-03-20" },
     B1009: { name: "Shawarma Burger", price: 800.00, discount: 0 },
     B1010: { name: "Olive Burger", price: 1800.00, discount: 0, expDate: "2024-07-05" },
     B1012: { name: "Double-Cheese Burger", price: 1250.00, discount: 20, expDate: "2024-07-05" },
@@ -25,7 +25,7 @@ const submarines = {
     B1020: { name: "Grinder Submarine", price: 2300.00, discount: 0, expDate: "2025-05-05" },
     B1021: { name: "Cheese Submarine", price: 2200.00, discount: 0, expDate: "2025-09-05" },
     B1022: { name: "Double Cheese n Chicken Submarine", price: 1900.00, discount: 16, expDate: "2025-07-12" },
-    B1023: { name: "Special Horgie Submarine", price: 2800.00, discount: 0, expDate: "2025-03-20"},
+    B1023: { name: "Special Horgie Submarine", price: 2800.00, discount: 0, expDate: "2025-03-20" },
     B1024: { name: "MOS Special Submarine", price: 3000.00, discount: 0 }
 };
 
@@ -77,7 +77,7 @@ const allItems = {
     B1005: { name: "Chicken Burger (Regular)", price: 800.00, discount: 20, expDate: "2025-05-05" },
     B1006: { name: "Cheese Burger (Large)", price: 1000.00, discount: 0, expDate: "2025-09-05" },
     B1007: { name: "Cheese Burger (Regular)", price: 600.00, discount: 0, expDate: "2025-07-12" },
-    B1008: { name: "Bacon Burger", price: 650.00, discount: 15, expDate: "2025-03-20"},
+    B1008: { name: "Bacon Burger", price: 650.00, discount: 15, expDate: "2025-03-20" },
     B1009: { name: "Shawarma Burger", price: 800.00, discount: 0 },
     B1010: { name: "Olive Burger", price: 1800.00, discount: 0, expDate: "2024-07-05" },
     B1012: { name: "Double-Cheese Burger", price: 1250.00, discount: 20, expDate: "2024-07-05" },
@@ -91,7 +91,7 @@ const allItems = {
     B1020: { name: "Grinder Submarine", price: 2300.00, discount: 0, expDate: "2025-05-05" },
     B1021: { name: "Cheese Submarine", price: 2200.00, discount: 0, expDate: "2025-09-05" },
     B1022: { name: "Double Cheese n Chicken Submarine", price: 1900.00, discount: 16, expDate: "2025-07-12" },
-    B1023: { name: "Special Horgie Submarine", price: 2800.00, discount: 0, expDate: "2025-03-20"},
+    B1023: { name: "Special Horgie Submarine", price: 2800.00, discount: 0, expDate: "2025-03-20" },
     B1024: { name: "MOS Special Submarine", price: 3000.00, discount: 0 },
     B1025: { name: "Steak Fries (Large)", price: 1200.00, discount: 0, expDate: "2025-07-15" },
     B1026: { name: "Steak Fries (Medium)", price: 600.00, discount: 0, expDate: "2025-08-25" },
@@ -281,14 +281,14 @@ function loadBurgers() {
             <td>${price}/=</td>
             <td>${burger.discount}%</td>
             <td>${burger.expDate || 'N/A'}</td>
-            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+            <td><button id="addButton" onclick="addToOrder('${burger.name}')">Add</button></td>
         `;
         allFoodsTable.appendChild(row);
     }
 }
 
 // Loading Submarines
-function loadSubmarines(){
+function loadSubmarines() {
     const allFoodsTable = document.getElementById("allfoods");
     allFoodsTable.innerHTML = '';
 
@@ -311,14 +311,14 @@ function loadSubmarines(){
             <td>${price}/=</td>
             <td>${Submarine.discount}%</td>
             <td>${Submarine.expDate || 'N/A'}</td>
-            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+            <td><button id="addButton" onclick="addToOrder('${Submarine.name}')">Add</button></td>
         `;
         allFoodsTable.appendChild(row);
     }
 }
 
 // Loading Fries
-function loadFries(){
+function loadFries() {
     const allFoodsTable = document.getElementById("allfoods");
     allFoodsTable.innerHTML = '';
 
@@ -341,14 +341,14 @@ function loadFries(){
             <td>${price}/=</td>
             <td>${Frie.discount}%</td>
             <td>${Frie.expDate || 'N/A'}</td>
-            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+            <td><button id="addButton" onclick="addToOrder('${Frie.name}')">Add</button></td>
         `;
         allFoodsTable.appendChild(row);
     }
 }
 
 // Load Pasta
-function loadPasta(){
+function loadPasta() {
     const allFoodsTable = document.getElementById("allfoods");
     allFoodsTable.innerHTML = '';
 
@@ -371,14 +371,14 @@ function loadPasta(){
             <td>${price}/=</td>
             <td>${Pasta.discount}%</td>
             <td>${Pasta.expDate || 'N/A'}</td>
-            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+            <td><button id="addButton" onclick="addToOrder('${Pasta.name}')">Add</button></td>
         `;
         allFoodsTable.appendChild(row);
     }
 }
 
 // Load Chicken
-function loadChickens(){
+function loadChickens() {
     const allFoodsTable = document.getElementById("allfoods");
     allFoodsTable.innerHTML = '';
 
@@ -401,14 +401,14 @@ function loadChickens(){
             <td>${price}/=</td>
             <td>${Chicken.discount}%</td>
             <td>${Chicken.expDate || 'N/A'}</td>
-            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+            <td><button id="addButton" onclick="addToOrder('${Chicken.name}')">Add</button></td>
         `;
         allFoodsTable.appendChild(row);
     }
 }
 
 // Load Beverages
-function loadBeverages(){
+function loadBeverages() {
     const allFoodsTable = document.getElementById("allfoods");
     allFoodsTable.innerHTML = '';
 
@@ -431,14 +431,14 @@ function loadBeverages(){
             <td>${price}/=</td>
             <td>${Beverages.discount}%</td>
             <td>${Beverages.expDate || 'N/A'}</td>
-            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+            <td><button id="addButton" onclick="addToOrder('${Beverages.name}')">Add</button></td>
         `;
         allFoodsTable.appendChild(row);
     }
 }
 
 // Load All Items
-function loadAllItems(){
+function loadAllItems() {
     const allFoodsTable = document.getElementById("allfoods");
     allFoodsTable.innerHTML = '';
 
@@ -461,10 +461,44 @@ function loadAllItems(){
             <td>${price}/=</td>
             <td>${AllItems.discount}%</td>
             <td>${AllItems.expDate || 'N/A'}</td>
-            <td><button id="addButton" onclick="addToOrder">Add</button></td>
+            <td><button id="addButton" onclick="addToOrder('${AllItems.name}')">Add</button></td>
         `;
         allFoodsTable.appendChild(row);
     }
+}
+
+// Place Order
+function addToOrder(itemname) {
+    console.log(itemname);
+
+    const orderTableBody = document.getElementById("orderSection").getElementsByTagName("tbody")[0];
+
+    const newRow = document.createElement("tr");
+
+    const itemCell = document.createElement("td");
+    itemCell.textContent = itemname;
+    newRow.appendChild(itemCell);
+
+    const quantityCell = document.createElement("td");
+    const quantityInput = document.createElement("input");
+    quantityInput.type = "number";
+    quantityInput.id = "quantity";
+    quantityInput.value = 1;
+    quantityInput.min = 1;
+    quantityCell.appendChild(quantityInput);
+    newRow.appendChild(quantityCell);
+
+    const removeCell = document.createElement("td");
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.id = "removeButton";
+    removeButton.onclick = function() {
+        orderTableBody.removeChild(newRow);
+    };
+    removeCell.appendChild(removeButton);
+    newRow.appendChild(removeCell);
+
+    orderTableBody.appendChild(newRow);
 }
 
 // Back To Home Method
