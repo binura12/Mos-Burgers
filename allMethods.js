@@ -1,19 +1,19 @@
 // Burgers Object
 const burgers = {
-    B1001: { name: "Classic Burger (Large)", price: 750.00, discount: 0 },
-    B1002: { name: "Classic Burger (Regular)", price: 1500.00, discount: 15 },
+    B1001: { name: "Classic Burger (Large)", price: 750.00, discount: 0, expDate: "2025-07-15" },
+    B1002: { name: "Classic Burger (Regular)", price: 1500.00, discount: 15, expDate: "2025-08-25" },
     B1003: { name: "Turkey Burger", price: 1600.00, discount: 0 },
     B1004: { name: "Chicken Burger (Large)", price: 1400.00, discount: 0 },
-    B1005: { name: "Chicken Burger (Regular)", price: 800.00, discount: 20 },
-    B1006: { name: "Cheese Burger (Large)", price: 1000.00, discount: 0 },
-    B1007: { name: "Cheese Burger (Regular)", price: 600.00, discount: 0 },
-    B1008: { name: "Bacon Burger", price: 650.00, discount: 15 },
+    B1005: { name: "Chicken Burger (Regular)", price: 800.00, discount: 20, expDate: "2025-05-05" },
+    B1006: { name: "Cheese Burger (Large)", price: 1000.00, discount: 0, expDate: "2025-09-05" },
+    B1007: { name: "Cheese Burger (Regular)", price: 600.00, discount: 0, expDate: "2025-07-12" },
+    B1008: { name: "Bacon Burger", price: 650.00, discount: 15, expDate: "2025-03-20"},
     B1009: { name: "Shawarma Burger", price: 800.00, discount: 0 },
-    B1010: { name: "Olive Burger", price: 1800.00, discount: 0 },
-    B1012: { name: "Double-Cheese Burger", price: 1250.00, discount: 20 },
+    B1010: { name: "Olive Burger", price: 1800.00, discount: 0, expDate: "2024-07-05" },
+    B1012: { name: "Double-Cheese Burger", price: 1250.00, discount: 20, expDate: "2024-07-05" },
     B1013: { name: "Crispy Chicken Burger (Regular)", price: 1200.00, discount: 0 },
     B1014: { name: "Crispy Chicken Burger (Large)", price: 1600.00, discount: 10 },
-    B1015: { name: "Paneer Burger", price: 900.00, discount: 0 }
+    B1015: { name: "Paneer Burger", price: 900.00, discount: 0, expDate: "2024-07-05" }
 };
 
 // Login to Admin Form
@@ -165,6 +165,7 @@ function loadBurgers() {
         <th>Name</th>
         <th>Price</th>
         <th>Discount</th>
+        <th>Exp.Date</th>
     `;
     allBurgersTable.appendChild(headerRow);
 
@@ -177,6 +178,7 @@ function loadBurgers() {
             <td>${burger.name}</td>
             <td>${price}/=</td>
             <td>${burger.discount}%</td>
+            <td>${burger.expDate}</td>
             <td><button id="addButton" onclick="addToOrder">Add</button></td>
         `;
 
