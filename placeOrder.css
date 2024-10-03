@@ -254,19 +254,19 @@ body {
                         background-color: black;
                     }
 
-                    #btnSave {
+                    #btnClear {
                         width: 80px;
                         font-family: Montserrat;
                         height: 30px;
                         border-radius: 10px;
                         border: none;
-                        background-color: #6290C3;
-                        color: black;
+                        background-color: red;
+                        color: white;
                         font-size: 15px;
                     }
 
-                    #btnSave:hover {
-                        background-color: #6b9acf;
+                    #btnClear:hover {
+                        background-color: rgb(203, 16, 16);
                     }
                 }
             }

@@ -163,6 +163,11 @@ function placeOrderForm() {
     window.location.href = "placeOrder.html";
 }
 
+//Loading saved orders
+function savedOrders(){
+    window.location.href = "savedOrders.html";
+}
+
 // Add Customer Method
 let customerCount = parseInt(localStorage.getItem('customerCount')) || 1;
 let customers = JSON.parse(localStorage.getItem('customers')) || [];
@@ -191,11 +196,8 @@ function addCustomer() {
 
     customerCount++;
     localStorage.setItem('customerCount', customerCount);
-
-    document.getElementById("cusId").value = "C" + String(customerCount).padStart(4, '0');
-
     clearFields();
-    document.getElementById("cusId").value = "";
+    document.getElementById("cusId").value = "C" + String(customerCount).padStart(4, '0');
 }
 
 // Search Customer Method
@@ -523,6 +525,13 @@ function updatePriceSection() {
     document.getElementById("FinalValue").innerText = finalValue.toFixed(2) + '/=';
 }
 
+// Generate Random Bill Id
+function generateBillId() {
+    const prefix = 'B';
+    const randomNum = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+    return prefix + randomNum;
+}
+
 // Back To Home Method
 function bachToHome() {
     window.location.href = "cashierMenu.html";
@@ -535,3 +544,72 @@ function clearFields() {
     document.getElementById("addressTxt").value = "";
     document.getElementById("emailTxt").value = "";
 }
+
+// save orders in oreders object
+function printBill(){
+    let CustomerNAME = document.getElementById("cusName").value;
+    let billId = document.getElementById("billId").value;
+    let orderSection = document.getElementById("orderSection").getElementsByTagName("tbody")[0];
+    let itemNames = Array.from(orderSection.children)
+        .map(item => item.cells[0].innerText.trim())
+        .join(", ");
+
+    itemNames = cleanItemNames(itemNames);
+
+    let discountValue = parseFloat(document.getElementById("discountValue").textContent);
+    let finalValue = parseFloat(document.getElementById("FinalValue").textContent);
+
+    let order = {
+        billid : billId,
+        itemName : itemNames,
+        customerName : CustomerNAME,
+        discountValue : discountValue,
+        finalValue : finalValue
+    };
+
+    let orders = JSON.parse(localStorage.getItem('orders')) || [];
+
+    orders.push(order);
+    localStorage.setItem('orders', JSON.stringify(orders));
+
+    document.getElementById("cusName").value = "";
+    document.getElementById("billId").value = generateBillId();
+    orderItems.innerHTML = "";
+    document.getElementById("totalValue").textContent = "0.00";
+    document.getElementById("discountValue").textContent = "0.00";
+    document.getElementById("FinalValue").textContent = "0.00";
+}
+
+//clear all items by one click
+function clearOrder(){
+    document.getElementById("orderItems").innerHTML = "";
+    document.getElementById("totalValue").textContent = "0.00";
+    document.getElementById("discountValue").textContent = "0.00";
+    document.getElementById("FinalValue").textContent = "0.00";
+}
+
+// remove quantity and remove text
+function cleanItemNames(itemNameString) {
+    return itemNameString
+        .split(',')
+        .map(item => item.replace(/Item Name|Quantity|Remove/g, '').trim())
+        .filter(item => item !== '')
+        .join(', ');
+}
+
+// Load Saved Orders
+// function loadOrders() { 
+//     const orders = JSON.parse(localStorage.getItem('orders')) || [];
+//     const tbody = document.getElementById('savedOrdersBody');
+//     tbody.innerHTML = ""; 
+
+//     orders.forEach((order) => {
+//         const row = document.createElement('tr');
+//         row.innerHTML = `
+//             <td id="customerName">${order.customerName}</td>
+//             <td id="BillId">${order.billid}</td>
+//             <td><button id="viewButton" onclick="viewOrder('${order.billId}')">View -></button></td>
+//         `;
+//         tbody.appendChild(row);
+//     });
+// }
