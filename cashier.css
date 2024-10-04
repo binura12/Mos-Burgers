@@ -88,3 +88,94 @@ body {
         }
     }
 }
+
+@media (max-width: 1367px) {
+    body {
+        background-color: #BAFF29;
+    
+        .container {
+            width: 100%;
+    
+            h1 {
+                color: #baff29;
+                text-align: center;
+                font-size: 80px;
+                font-family: Pacifico;
+                margin-top: -10px;
+                -webkit-text-stroke: 3px black;
+            }
+    
+            .bgImage{
+                width: 750px;
+                margin-top: -70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 440px) {
+    body {
+        background-color: #BAFF29;
+
+        .container {
+            width: 100%;
+
+            h1 {
+                color: #baff29;
+                text-align: center;
+                font-size: 55px;
+                font-family: Pacifico;
+                margin-top: -10px;
+                -webkit-text-stroke: 3px black;
+            }
+
+            .bgImage {
+                display: none;
+            }
+
+            .rectangle {
+                font-family: Montserrat;
+                width: 75%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                backdrop-filter: blur(5px);
+                border-radius: 35px;
+                background-color: rgba(0, 0, 0, 0.70);
+                border: 1px solid #000;
+                box-sizing: border-box;
+                height: 700px;
+                margin-top: 50px;
+
+                .login {
+                    font-size: 50px;
+                    color: white;
+                }
+
+                .logText {
+                    font-size: 17px;
+                    color: white;
+                    opacity: 0.8;
+                }
+
+                input {
+                    font-family: Montserrat;
+                    margin-top: 270px;
+                    display: flex;
+                    width: 220px;
+                    height: 45px;
+                    border-radius: 25px;
+                    text-align: center;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

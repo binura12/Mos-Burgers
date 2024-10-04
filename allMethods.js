@@ -537,6 +537,10 @@ function bachToHome() {
     window.location.href = "cashierMenu.html";
 }
 
+function logout(){
+    window.location.href = "cashier.html";
+}
+
 // Clear Fields Method
 function clearFields() {
     document.getElementById("fNameTxt").value = "";
@@ -595,6 +599,45 @@ function cleanItemNames(itemNameString) {
         .map(item => item.replace(/Item Name|Quantity|Remove/g, '').trim())
         .filter(item => item !== '')
         .join(', ');
+}
+
+function searchItem() {
+    let searchBar = document.getElementById("searchBar").value.trim().toLowerCase();
+    let allFoodsTable = document.getElementById("allfoods");
+
+    allFoodsTable.innerHTML = "";
+
+    const headerRow = document.createElement('tr');
+    headerRow.innerHTML = `
+        <th>Name</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Exp.Date</th>
+    `;
+
+    allFoodsTable.appendChild(headerRow);
+    let foundItems = Object.values(allItems).filter(item => item.name.toLowerCase().includes(searchBar));
+
+    if (foundItems.length > 0) {
+        foundItems.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>${item.price}/=</td>
+                <td>${item.discount}%</td>
+                <td>${item.expDate || 'N/A'}</td>
+                <td><button id="addButton" onclick="addToOrder('${item.name}')">Add</button></td>
+            `;
+            allFoodsTable.appendChild(row);
+        });
+    } else {
+        const row = document.createElement('tr');
+        const cell = document.createElement('td');
+        cell.colSpan = 5;
+        cell.textContent = "No items found";
+        row.appendChild(cell);
+        allFoodsTable.appendChild(row);
+    }
 }
 
 // Load Saved Orders

@@ -32,7 +32,7 @@ body {
             .body {
                 width: 70%;
 
-                .searching{
+                .searching {
                     font-family: Montserrat;
                     float: left;
                     margin-bottom: 30px;
@@ -45,8 +45,8 @@ body {
                         border: none;
                         text-align: center;
                     }
-    
-                    #searchCus{
+
+                    #searchCus {
                         width: 40px;
                         height: 40px;
                         border-radius: 100px;
@@ -55,28 +55,29 @@ body {
                         border: none;
                         float: left;
                         margin-left: 10px;
-    
-                        #searchIcon{
+
+                        #searchIcon {
                             width: 20px;
                         }
                     }
 
-                    #searchCus:hover{
+                    #searchCus:hover {
                         background-color: rgb(230, 230, 230);
                     }
                 }
 
-                .inputFields{
+                .inputFields {
                     margin-top: 70px;
                     margin-left: 20px;
 
-                    .txtFieldsTitles{
+                    .txtFieldsTitles {
                         color: white;
                         font-family: Montserrat;
                         font-size: 20px;
                         padding-right: 60px;
                     }
-                    input{
+
+                    input {
                         font-size: 20px;
                         height: 40px;
                         font-family: Montserrat;
@@ -86,10 +87,11 @@ body {
                         border: none;
                     }
                 }
-                .inputButtons{
+
+                .inputButtons {
                     margin-top: 40px;
 
-                    button{
+                    button {
                         width: 180px;
                         height: 50px;
                         border: none;
@@ -98,33 +100,603 @@ body {
                         font-family: Montserrat;
                     }
 
-                    #updateCustomer{
+                    #updateCustomer {
                         background-color: #F1FFE7;
                         margin-right: 20px;
                     }
 
-                    #updateCustomer:hover{
+                    #updateCustomer:hover {
                         background-color: #C2E7DA;
                         cursor: pointer;
                     }
 
-                    #deleteCustomer{
+                    #deleteCustomer {
                         background-color: #e84118;
                         color: white;
                     }
 
-                    #deleteCustomer:hover{
+                    #deleteCustomer:hover {
                         background-color: #c23616;
                     }
 
-                    #backToHome{
+                    #backToHome {
                         background-color: #6290C3;
                         margin-left: 20px;
                     }
-                    #backToHome:hover{
+
+                    #backToHome:hover {
                         background-color: #1A1B41;
                         color: white;
                         cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1368px) {
+    body {
+        background-color: #BAFF29;
+        font-family: Montserrat;
+
+        .container {
+            width: 100%;
+
+            .bgImage {
+                width: 850px;
+            }
+
+            .rectangle {
+                width: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                backdrop-filter: blur(5px);
+                border-radius: 35px;
+                background-color: rgba(0, 0, 0, 0.48);
+                border: 1px solid #000;
+                box-sizing: border-box;
+                height: 670px;
+
+                .searchCus {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 60px;
+                    color: white;
+                }
+
+                .body {
+                    width: 70%;
+
+                    .searching {
+                        font-family: Montserrat;
+                        float: left;
+                        margin-bottom: 30px;
+
+                        #cusId2 {
+                            width: 120px;
+                            height: 40px;
+                            border-radius: 100px;
+                            font-size: 25px;
+                            border: none;
+                            text-align: center;
+                        }
+
+                        #searchCus {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100px;
+                            background-color: white;
+                            padding: 10px;
+                            border: none;
+                            float: left;
+                            margin-left: 10px;
+
+                            #searchIcon {
+                                width: 20px;
+                            }
+                        }
+
+                        #searchCus:hover {
+                            background-color: rgb(230, 230, 230);
+                        }
+                    }
+
+                    .inputFields {
+                        margin-top: 70px;
+                        margin-left: 20px;
+
+                        .txtFieldsTitles {
+                            color: white;
+                            font-family: Montserrat;
+                            font-size: 20px;
+                            padding-right: 60px;
+                        }
+
+                        input {
+                            font-size: 20px;
+                            height: 40px;
+                            font-family: Montserrat;
+                            text-align: center;
+                            width: 590px;
+                            border-radius: 15px;
+                            border: none;
+                        }
+                    }
+
+                    .inputButtons {
+                        margin-top: 40px;
+
+                        button {
+                            width: 180px;
+                            height: 50px;
+                            border: none;
+                            font-size: 20px;
+                            border-radius: 100px;
+                            font-family: Montserrat;
+                        }
+
+                        #updateCustomer {
+                            background-color: #F1FFE7;
+                            margin-right: 20px;
+                        }
+
+                        #updateCustomer:hover {
+                            background-color: #C2E7DA;
+                            cursor: pointer;
+                        }
+
+                        #deleteCustomer {
+                            background-color: #e84118;
+                            color: white;
+                        }
+
+                        #deleteCustomer:hover {
+                            background-color: #c23616;
+                        }
+
+                        #backToHome {
+                            background-color: #6290C3;
+                            margin-left: 20px;
+                        }
+
+                        #backToHome:hover {
+                            background-color: #1A1B41;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    body {
+        background-color: #BAFF29;
+        font-family: Montserrat;
+
+        .container {
+            width: 100%;
+
+            .bgImage {
+                width: 850px;
+                margin-top: 100px;
+            }
+
+            .rectangle {
+                width: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                backdrop-filter: blur(5px);
+                border-radius: 35px;
+                background-color: rgba(0, 0, 0, 0.48);
+                border: 1px solid #000;
+                box-sizing: border-box;
+                height: 670px;
+
+                .searchCus {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 60px;
+                    color: white;
+                }
+
+                .body {
+                    width: 70%;
+
+                    .searching {
+                        font-family: Montserrat;
+                        float: left;
+                        margin-bottom: 30px;
+
+                        #cusId2 {
+                            width: 110px;
+                            height: 35px;
+                            border-radius: 100px;
+                            font-size: 18px;
+                            border: none;
+                            text-align: center;
+                            font-family: Montserrat;
+                            float: left;
+                        }
+
+                        #searchCus {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100px;
+                            background-color: white;
+                            padding: 10px;
+                            border: none;
+                            float: left;
+                            margin-left: 10px;
+
+                            #searchIcon {
+                                width: 20px;
+                            }
+                        }
+
+                        #searchCus:hover {
+                            background-color: rgb(230, 230, 230);
+                        }
+                    }
+
+                    .inputFields {
+                        margin-top: 70px;
+                        margin-left: 20px;
+
+                        .txtFieldsTitles {
+                            color: white;
+                            font-family: Montserrat;
+                            font-size: 16px;
+                            padding-right: 60px;
+                        }
+
+                        input {
+                            font-size: 15px;
+                            height: 40px;
+                            font-family: Montserrat;
+                            text-align: center;
+                            width: 500px;
+                            border-radius: 15px;
+                            border: none;
+                        }
+                    }
+
+                    .inputButtons {
+                        margin-top: 30px;
+
+                        button {
+                            width: 170px;
+                            height: 45px;
+                            border: none;
+                            font-size: 17px;
+                            border-radius: 100px;
+                            font-family: Montserrat;
+                        }
+
+                        #updateCustomer {
+                            background-color: #F1FFE7;
+                            margin-right: 20px;
+                        }
+
+                        #updateCustomer:hover {
+                            background-color: #C2E7DA;
+                            cursor: pointer;
+                        }
+
+                        #deleteCustomer {
+                            background-color: #e84118;
+                            color: white;
+                        }
+
+                        #deleteCustomer:hover {
+                            background-color: #c23616;
+                        }
+
+                        #backToHome {
+                            background-color: #6290C3;
+                            margin-left: 20px;
+                        }
+
+                        #backToHome:hover {
+                            background-color: #1A1B41;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 769px) {
+    body {
+        background-color: #BAFF29;
+        font-family: Montserrat;
+
+        .container {
+            width: 100%;
+
+            .bgImage {
+                width: 750px;
+                margin-top: 150px;
+            }
+
+            .rectangle {
+                width: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                backdrop-filter: blur(5px);
+                border-radius: 35px;
+                background-color: rgba(0, 0, 0, 0.48);
+                border: 1px solid #000;
+                box-sizing: border-box;
+                height: 670px;
+
+                .searchCus {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 60px;
+                    color: white;
+                }
+
+                .body {
+                    width: 70%;
+
+                    .searching {
+                        font-family: Montserrat;
+                        float: left;
+                        margin-bottom: 30px;
+
+                        #cusId2 {
+                            width: 100px;
+                            height: 35px;
+                            border-radius: 100px;
+                            font-size: 20px;
+                            border: none;
+                            text-align: center;
+                            font-family: Montserrat;
+                            float: left;
+                        }
+
+                        #searchCus {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100px;
+                            background-color: white;
+                            padding: 10px;
+                            border: none;
+                            float: left;
+                            margin-left: 10px;
+
+                            #searchIcon {
+                                width: 20px;
+                            }
+                        }
+
+                        #searchCus:hover {
+                            background-color: rgb(230, 230, 230);
+                        }
+                    }
+
+                    .inputFields {
+                        margin-top: 70px;
+                        margin-left: 20px;
+
+                        .txtFieldsTitles {
+                            color: white;
+                            font-family: Montserrat;
+                            font-size: 15px;
+                            padding-right: 60px;
+                        }
+
+                        input {
+                            font-size: 15px;
+                            height: 40px;
+                            font-family: Montserrat;
+                            text-align: center;
+                            width: 300px;
+                            border-radius: 15px;
+                            border: none;
+                        }
+                    }
+
+                    .inputButtons {
+                        margin-top: 30px;
+                        margin-left: -40px;
+
+                        button {
+                            width: 170px;
+                            height: 40px;
+                            border: none;
+                            font-size: 19px;
+                            border-radius: 100px;
+                            font-family: Montserrat;
+                        }
+
+                        #updateCustomer {
+                            background-color: #F1FFE7;
+                            margin-right: 20px;
+                        }
+
+                        #updateCustomer:hover {
+                            background-color: #C2E7DA;
+                            cursor: pointer;
+                        }
+
+                        #deleteCustomer {
+                            background-color: #e84118;
+                            color: white;
+                        }
+
+                        #deleteCustomer:hover {
+                            background-color: #c23616;
+                        }
+
+                        #backToHome {
+                            background-color: #6290C3;
+                            margin-left: 20px;
+                        }
+
+                        #backToHome:hover {
+                            background-color: #1A1B41;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 441px) {
+    body {
+        background-color: #BAFF29;
+        font-family: Montserrat;
+
+        .container {
+            width: 100%;
+
+            .bgImage {
+                display: none;
+            }
+
+            .rectangle {
+                width: 90%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                backdrop-filter: blur(5px);
+                border-radius: 35px;
+                background-color: rgba(0, 0, 0, 0.70);
+                border: 1px solid #000;
+                box-sizing: border-box;
+                height: 670px;
+
+                .searchCus {
+                    display: block;
+                    margin-top: 10px;
+                    font-size: 60px;
+                    color: white;
+                }
+
+                .body {
+                    width: 90%;
+
+                    .searching {
+                        font-family: Montserrat;
+                        margin-bottom: 30px;
+                        left: 50%;
+                        transform: translate(40%, 10%);
+
+                        #cusId2 {
+                            width: 110px;
+                            height: 35px;
+                            border-radius: 100px;
+                            font-size: 20px;
+                            border: none;
+                            text-align: center;
+                            font-family: Montserrat;
+                            border: none;
+                            text-align: center;
+                        }
+
+                        #searchCus {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100px;
+                            background-color: white;
+                            padding: 10px;
+                            border: none;
+                            float: left;
+                            margin-left: 10px;
+
+                            #searchIcon {
+                                width: 20px;
+                            }
+                        }
+
+                        #searchCus:hover {
+                            background-color: rgb(230, 230, 230);
+                        }
+                    }
+
+                    .inputFields {
+                        margin-top: 70px;
+                        margin-left: 20px;
+
+                        .txtFieldsTitles {
+                            color: white;
+                            font-family: Montserrat;
+                            font-size: 10px;
+                            padding-right: 10px;
+                        }
+
+                        input {
+                            font-size: 10px;
+                            height: 30px;
+                            font-family: Montserrat;
+                            text-align: center;
+                            width: 170px;
+                            border-radius: 15px;
+                            border: none;
+                        }
+                    }
+
+                    .inputButtons {
+                        margin-top: 30px;
+                        margin-left: -12px;
+
+                        button {
+                            width: 105px;
+                            height: 40px;
+                            border: none;
+                            font-size: 15px;
+                            border-radius: 100px;
+                            font-family: Montserrat;
+                        }
+
+                        #updateCustomer {
+                            background-color: #F1FFE7;
+                            margin-right: 5px;
+                        }
+
+                        #updateCustomer:hover {
+                            background-color: #C2E7DA;
+                            cursor: pointer;
+                        }
+
+                        #deleteCustomer {
+                            background-color: #e84118;
+                            color: white;
+                        }
+
+                        #deleteCustomer:hover {
+                            background-color: #c23616;
+                        }
+
+                        #backToHome {
+                            background-color: #6290C3;
+                            margin-left: 5px;
+                            font-size: 12px;
+                        }
+
+                        #backToHome:hover {
+                            background-color: #1A1B41;
+                            color: white;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
