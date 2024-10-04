@@ -537,6 +537,7 @@ function bachToHome() {
     window.location.href = "cashierMenu.html";
 }
 
+// Logout Method
 function logout(){
     window.location.href = "cashier.html";
 }
@@ -576,6 +577,19 @@ function printBill(){
     orders.push(order);
     localStorage.setItem('orders', JSON.stringify(orders));
 
+    // Create a bill
+    let billWindow = window.open('', '', 'width=800,height=600');
+    billWindow.document.write('<html><head><title>Mos Burgers</title></head><body>');
+    billWindow.document.write('<h1>Bill</h1>');
+    billWindow.document.write('<p>Customer Name: ' + CustomerNAME + '</p>');
+    billWindow.document.write('<p>Bill ID: ' + billId + '</p>');
+    billWindow.document.write('<p>Items: ' + itemNames + '</p>');
+    billWindow.document.write('<p>Discount Value: ' + discountValue.toFixed(2) + '/=</p>');
+    billWindow.document.write('<p>Final Value: ' + finalValue.toFixed(2) + '/=</p>');
+    billWindow.document.write('</body></html>');
+    billWindow.document.close();
+    billWindow.print();
+
     document.getElementById("cusName").value = "";
     document.getElementById("billId").value = generateBillId();
     orderItems.innerHTML = "";
@@ -601,6 +615,7 @@ function cleanItemNames(itemNameString) {
         .join(', ');
 }
 
+// Search Item
 function searchItem() {
     let searchBar = document.getElementById("searchBar").value.trim().toLowerCase();
     let allFoodsTable = document.getElementById("allfoods");
